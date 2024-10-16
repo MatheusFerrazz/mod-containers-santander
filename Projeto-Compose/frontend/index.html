@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+</head>
+
+<body>
+    <h1>Frontend funcionando!</h1>
+    <div id="backend-data"></div>
+
+    <script>
+        fetch('http://localhost:3000/')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('backend-data').innerText = data;
+            })
+            .catch(err => {
+                document.getElementById('backend-data').innerText = 'Erro ao conectar ao backend';
+            });
+    </script>
+</body>
+
+</html>

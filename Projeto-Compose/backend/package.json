@@ -1,0 +1,10 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "main": "app.mjs",
+    "type": "module",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongodb": "^3.6.4"
+    }
+}
