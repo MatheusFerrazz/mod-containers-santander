@@ -1,1 +1,52 @@
-# mod-containers-santander
+# Principais comandos do DOCKER
+
+- `docker run [imagem]` - Executa um novo container a partir de uma imagem especificada.
+- `docker ps` - Lista todos os containers em execução no momento.
+- `docker ps -a` - Lista todos os containers, incluindo os que estão parados.
+- `docker stop [container_id]` - Para a execução de um container em execução.
+- `docker start [container_id]` - Inicia um container que foi parado.
+- `docker restart [container_id]` - Reinicia um container.
+- `docker rm [container_id]` - Remove um container parado.
+- `docker rmi [imagem]` - Remove uma imagem do sistema.
+- `docker build -t [nome_da_imagem] .` - Cria uma nova imagem a partir de um Dockerfile no diretório atual.
+- `docker exec -it [container_id] [comando]` - Executa um comando dentro de um container em execução.
+- `docker pull [imagem]` - Baixa uma imagem do Docker Hub.
+- `docker push [imagem]` - Envia uma imagem para um repositório como o Docker Hub.
+- `docker logs [container_id]` - Exibe os logs de um container.
+- `docker inspect [container_id]` - Mostra informações detalhadas sobre um container ou uma imagem.
+- `docker-compose up` - Inicia containers definidos em um arquivo `docker-compose.yml`.
+- `docker-compose down` - Para e remove containers criados pelo `docker-compose up`.
+- `docker network ls` - Lista as redes Docker criadas.
+- `docker volume ls` - Lista os volumes Docker criados.
+- `docker image ls` - Lista todas as imagens disponíveis no sistema.
+- `docker system prune` - Remove todos os containers, imagens, redes e volumes não utilizados.
+- `docker attach [container_id]` - Conecta a entrada padrão, saída e erro de um container em execução.
+- `docker cp [container_id]:/caminho_no_container /caminho_local` - Copia arquivos ou diretórios de um container para o sistema local.
+- `docker cp /caminho_local [container_id]:/caminho_no_container` - Copia arquivos ou diretórios do sistema local para um container.
+- `docker create [imagem]` - Cria um novo container a partir de uma imagem, mas não o inicia.
+- `docker diff [container_id]` - Exibe as mudanças feitas no sistema de arquivos de um container.
+- `docker events` - Exibe os eventos em tempo real do Docker.
+- `docker export [container_id] > arquivo.tar` - Exporta o sistema de arquivos de um container como um arquivo tar.
+- `docker import arquivo.tar` - Importa um sistema de arquivos a partir de um arquivo tar como uma imagem Docker.
+- `docker info` - Exibe informações detalhadas sobre o sistema Docker.
+- `docker inspect [imagem]` - Mostra informações detalhadas sobre uma imagem.
+- `docker kill [container_id]` - Força a parada de um container imediatamente.
+- `docker load < arquivo.tar` - Carrega uma imagem a partir de um arquivo tar.
+- `docker pause [container_id]` - Pausa todos os processos em um container.
+- `docker unpause [container_id]` - Retoma todos os processos pausados em um container.
+- `docker rename [container_id] [novo_nome]` - Renomeia um container.
+- `docker stats` - Exibe estatísticas em tempo real de uso de recursos de todos os containers em execução.
+- `docker top [container_id]` - Exibe os processos rodando dentro de um container.
+- `docker update [container_id]` - Atualiza as configurações de um container.
+- `docker volume create [nome_do_volume]` - Cria um novo volume Docker.
+- `docker volume rm [nome_do_volume]` - Remove um volume Docker.
+- `docker history [imagem]` - Exibe o histórico de criação de uma imagem.
+- `docker tag [imagem] [repositório:tag]` - Marca uma imagem com uma nova tag.
+- `docker save -o [arquivo.tar] [imagem]` - Salva uma imagem como um arquivo tar.
+- `docker swarm init` - Inicializa um swarm (cluster de Docker).
+- `docker swarm join` - Adiciona um nó a um swarm.
+- `docker swarm leave` - Remove um nó de um swarm.
+- `docker service create --name [serviço] [imagem]` - Cria um novo serviço no Docker Swarm.
+- `docker service ls` - Lista todos os serviços em execução no Docker Swarm.
+- `docker service rm [serviço]` - Remove um serviço do Docker Swarm.
+- `docker secret create [nome] [arquivo]` - Cria um segredo que pode ser usado por serviços no Docker Swarm.
