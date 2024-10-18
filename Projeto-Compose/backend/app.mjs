@@ -1,11 +1,14 @@
-import express from 'express';       // Importação correta do Express (ESM)
-import mongodb from 'mongodb';       // Importação correta do MongoDB (CommonJS)
+import express from 'express';
+import mongodb from 'mongodb';
+import cors from 'cors';
 
-const { MongoClient } = mongodb;     // Desestruturação do MongoClient do módulo MongoDB
+const { MongoClient } = mongodb;
 
 const app = express();
 const port = 3000;
 const mongoUrl = 'mongodb://database-mongo:27017';
+
+app.use(cors());
 
 app.get('/', (req, res) => {
     MongoClient.connect(mongoUrl, { useUnifiedTopology: true }, (err, client) => {
